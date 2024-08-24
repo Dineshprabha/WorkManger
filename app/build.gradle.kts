@@ -3,6 +3,8 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.dagger)
     kotlin("kapt")
+    id("kotlin-kapt")
+    id("kotlin-parcelize")
 }
 
 android {
@@ -82,4 +84,6 @@ dependencies {
 
     implementation(libs.room.ktx)
     kapt(libs.room.compiler)
+
+    kapt("org.jetbrains.kotlinx:kotlinx-metadata-jvm:0.4.2")
 }

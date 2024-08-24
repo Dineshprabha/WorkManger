@@ -4,5 +4,5 @@ import com.dinesh.foregroundservices.data.model.QuoteDTO
 import com.dinesh.foregroundservices.domain.model.Quote
 
 fun QuoteDTO.toDomain(workType : String) : Quote{
-    return Quote(author, id, quote, workType)
+    return Quote( id, quote, author, workType)
 }
